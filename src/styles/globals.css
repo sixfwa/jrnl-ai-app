@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-950
+}
+
+.no-entries {
+    @apply font-montserrat mx-auto flex w-3/4 items-center justify-center gap-8 rounded-sm border border-gray-400 bg-slate-800/30 p-10 text-lg md:w-1/2
+}
