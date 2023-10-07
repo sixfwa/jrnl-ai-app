@@ -11,16 +11,13 @@ const Entry = () => {
   const { replace, query } = useRouter();
   const entryId = Array.isArray(query.pid) ? query.pid[0] : query.pid;
 
-  const {
-    data: entryData,
-    status: entryStatus,
-    refetch: refetchEntry,
-  } = api.journalling.getEntryById.useQuery(
-    { id: entryId! },
-    {
-      enabled: entryId !== undefined,
-    },
-  );
+  const { data: entryData, refetch: refetchEntry } =
+    api.journalling.getEntryById.useQuery(
+      { id: entryId! },
+      {
+        enabled: entryId !== undefined,
+      },
+    );
 
   const { mutate: deletionMutation } = api.journalling.deleteEntry.useMutation({
     onSuccess() {
