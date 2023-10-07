@@ -22,8 +22,8 @@ const Navigation = () => {
             !isOpen && "hidden md:flex"
           }`}
         >
-          <Link href="/">Entries</Link>
-          <Link href="/">Write</Link>
+          <Link href="/entries">Entries</Link>
+          <Link href="/write">Write</Link>
           <button className="w-min" onClick={() => void signOut()}>
             Logout
           </button>
